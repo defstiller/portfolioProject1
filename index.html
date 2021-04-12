@@ -15,24 +15,35 @@
     <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="./resources/styles/reset.css">
     <link rel="stylesheet" href="./resources/styles/styles.css">
-    <!-- GLOBAL SCRIPTS -->
-    <script src="https://kit.fontawesome.com/07fe4e0edd.js" crossorigin="anonymous"></script> <!-- ICON SCRIPT -->
 
+    <!-- GLOBAL SCRIPTS -->
+    <!-- Last Updated On script -->
     <script> window.onload = function() {   
-        document.getElementById("lastMod").innerHTML= "Last Updated on " + document.lastModified; }</script> <!-- Last Updated On script -->
+        document.getElementById("lastMod").innerHTML= "Last Updated on " + document.lastModified; }</script>
+    <!-- Tab runtime--> 
+    <script> 
+        window.onload = function (){ 
+            setInterval(oneSecond, 1000)
+        }
+        let time=0
+        function oneSecond() {
+            time+=1, 1000;
+            document.getElementById("timer").innerHTML= "You opened this page "+time+" seconds ago";
+        }
+    </script>
 
 </head>
 
 <body> <!-- BODY STARTS -->
 
     <header> <!-- HEADER STARTS -->
-
+        <div>
         <nav> <!-- NAVIGATION STARTS -->
         <h2> Artiom Asaturov </h2>
 
         <ul>
-            <li><a href="#">My Projects</a> </li>
-            <li><a href="#">My Experience <br/></a></li>
+            <li id="projects"><a href="#">My Projects</a> </li>
+            <li id="experience"><a href="#">My Experience </a></li><br/>
             <li id="lastMod"></li>
         </ul>
 
@@ -40,13 +51,32 @@
 
 
         </nav> <!-- NAVIGATION ENDS -->
-
+    </div>
     </header> <!-- HEADER ENDS -->
 
+    <aside> <!-- CONTACT STARTS -->
+
+    <div id="asideDivider">
+        <h5>Would like to contact me?</h5>
+        <div>
+            <a href="https://www.linkedin.com/in/artiom-asaturov" target="_blank"></a>
+        </div>
+        <div>
+            <a href="mailto:asaturovartiom@gmail.com"></a>
+        </div>
+    </div>
+
+    </aside> <!-- CONTACT ENDS -->
+
     <main id="aboutMe"> <!-- ABOUT ME STARTS -->
+        <div id="imgContainer">
+            <img src="./resources/img/aboutMe.jpg" alt="Artiom and his dog">
+            <p>Do you like my doggo?</p>
+            </div>
         <h1> About Me </h1>
 
-        <p>Hello! I'm Artiom Asaturov, I have been part of a beutiful IT world for the past 3 years. As a part of QA team I have aquired extremely valuable skills on my way to becoming a professional developer
+
+        <p>Hello! I'm Artiom Asaturov, I have been part of a beutiful IT world for the past 3 years. As a part of QA team I have aquired extremely valuable skills on my way to becoming a professional developer.
             I love computers, cars, and most of all continuous growth. I enjoy challenges, as they are the best teachers you can ever find. 
         </p>
 
@@ -58,12 +88,10 @@
             My ultimate goal is to become a Full-Stack Developer, in my eyes programming is like creating a whole new world, and one day I want to be able to create this world from scratch to finish.
         </p>
 
-        <img src="./resources/img/aboutMe.jpg" alt="Artiom and his dog">
-        <figcaption>Do you like my doggo?</figcaption>
         <div>
         <h3>Why do I want to be a developer</h3>
         <p>I was born in Ukraine, which is known for its developers talents. I was growing up seeing scary, but beutifull lines of code, and I have always dreamed of being able to write them myself.
-            And now, when I finally started learning JS/HTMLS/CSS - I realized that coding is something that I want to devote my life to. 
+            And now, when I finally started learning JS/HTML/CSS - I realized that coding is something that I want to devote my life to. 
         </p>
         <p>
             I believe that the coding future is going to be even more exciting, and I want to be part of that future.
@@ -72,8 +100,19 @@
 
 
     </main> <!-- ABOUT ME ENDS -->
+        <div id="funFacts">
+            <h6>Fun Facts</h6>
+            <p>For 20 years, the password to USA nuclear missles were "00000000"</p>
+            <p id="timer"> You opened this page 0 seconds ago </p>
+            <p>We only keep 1 out of 10 apps we try</p>
+            <p>From 2013 to 2017 Amazon created over 44,000 robots for their Distribution Centers</p>
+            <p>Appolo 11 astranauts couldn't afford insurance</p>
+            <p>November 30 is Computer Security Day</p>
+        </div>
     <footer>
+
         <p>Thank you for visiting! &#128075 </p>
+ 
     </footer>
 
 

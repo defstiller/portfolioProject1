@@ -1,0 +1,73 @@
+html {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+header {
+    color: white;
+    height: 4rem;
+
+}
+
+nav { /* Name / Header List Grid */
+    background-color: black;
+    display: grid;
+    grid-template: repeat(10, 1fr) / repeat(20, 1fr); 
+    height:4rem;
+}
+header h2 {
+    grid-area: 1 / 1 / 10 / 8;
+    font-size: 4rem;
+    margin-left: 10px;
+}
+header ul { /* My Projects / My Experience Grid */
+    grid-area: 1 / 10 / 11 / 20;
+    display: grid;
+    grid-template: repeat(10, 1fr)/ repeat(20,1fr) ;
+    text-align: center;
+    font-size: large;
+}
+nav a {
+    color: white;
+    font-size: x-large;
+}
+#projects {
+    grid-area: 2 / 7 / 5 / 13;
+}
+#experience {
+    grid-area: 2 / 13 / 5 / 20;
+}
+#lastMod {
+    grid-area: 7 / 7 / 9 / 20;
+}
+aside{ /* Contact Menu */
+    display: none;
+}
+
+main h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+    padding-top: clamp(2%, 5%, 10%);
+    padding-bottom: 1%
+}
+main h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+main p, h1, h3{
+    line-height: 1.3rem;
+    width: clamp(30%, 50%, 70%);
+    margin:1%;
+}
+#imgContainer {
+    float: right;
+    padding-right: 2%;
+
+}
+#imgContainer p {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    
+}
